@@ -16,6 +16,5 @@ public class ImportantQuestions {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(importantQuestionsHeader));
         driver.findElement(By.xpath(".//div[@class='accordion']//div[contains(text(),'" + text + "')]")).click();
         return driver.findElement(By.xpath(".//div[contains(text(), '" + text + "')]/parent::div/parent::div/div[last()]/p")).getText();
-
     }
 }

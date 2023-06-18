@@ -45,7 +45,7 @@ public class DropdownTest {
         driver = new ChromeDriver();
         driver.get("https://qa-scooter.praktikum-services.ru/");
         ImportantQuestions object1 = new ImportantQuestions(driver);
-        assertEquals(true, object1.checkTextInDropdown(text1).equals(text2));
+        assertEquals(object1.checkTextInDropdown(text1), text2);
     }
     @After
     public void tearDown(){
